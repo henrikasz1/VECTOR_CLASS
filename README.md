@@ -11,6 +11,7 @@ creating vector class c++
       {
           limit = avail;
       }
+      
 * insert - įterpia reikšmę į pasirinktą vietą
 
       //insert()
@@ -42,7 +43,33 @@ creating vector class c++
           limit = data_ + new_size;
 
       }
+      
+* resize - pakeičia konteinerio dydį ir į laisvas vietas įrašo reikšmę
 
+      //resize()
+      template <class T>
+      void Vec<T>::resize(int it)
+      {
+          int count = 0;
+          if (it < this->size())
+          {
+              for (size_t i=it; i!=this->size(); i++)
+              {
+                  this->data_[i] = 0;
+                  count ++;
+              }
+              avail -= count;
+          }
+          else
+          {
+              int sz = this->size();
+              this->avail += it - this->size();
+              for (size_t i=sz; i!=it; i++)
+              {
+                  this->data_[i] = 0;
+              }
+          }
+      }
 ---------------
 Spartos analizė
 ---------------
