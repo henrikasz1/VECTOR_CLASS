@@ -70,6 +70,43 @@ creating vector class c++
               }
           }
       }
+      
+* erase - ištrina elementą pasiriktoje konteinerio vietoje
+
+      //erase()
+      template<class T>
+      void Vec<T>::erase(const_iterator it)
+      {
+          if (it < data_ || it > avail)
+              throw out_of_range{ "erase()" };
+          int temp = 0;
+          for (auto i = begin(); i < it; i++)
+          {
+              temp++;
+          }
+          for (temp; temp < size(); temp++)
+          {
+              data_[temp] = data_[temp + 1];
+          }
+          avail--;
+      }
+      
+* swap - apkeičia dviejų konteinerių duomenis tarpusavy
+
+      //swap()
+      template <class T>
+      void Vec<T>::swap(Vec<T>& l) noexcept
+      {
+          iterator temp_data_ = this->data_;
+          iterator temp_avail = this->avail;
+          iterator temp_limit = this->limit;
+          this->data_ = l.data_;
+          this->avail = l.avail;
+          this->limit = l.limit;
+          l.data_ = temp_data_;
+          l.avail = temp_avail;
+          l.limit = temp_limit;
+      }
 ---------------
 Spartos analizė
 ---------------
