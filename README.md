@@ -1,5 +1,17 @@
 # VECTOR_CLASS
 creating vector class c++
+---------------
+5 sukurtų funkcijų aprašai
+---------------
+* shrink_to_fit - sumažina konteinerio capacity() iki jo dydžio (size())    (  capacity() = size()  )
+
+      //shrink_to_fit()
+      template <class T>
+      void Vec<T>::shrink_to_fit() const
+      {
+          limit = avail;
+      }
+
 
 ---------------
 Spartos analizė
