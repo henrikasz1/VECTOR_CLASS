@@ -4,7 +4,7 @@ creating vector class c++
 Užduoties tikslas
 ---------------
 
-Sukurti vector konteinerį, kuris funckionalumo prasme veiktų taip pačiai kaip ir std::vector. Sukurtas konteineris turi visas member funkcijas, non-funkcija, member tipus.
+Sukurti vector konteinerį, kuris funckionalumo prasme veiktų taip pačiai kaip ir std::vector. Sukurtas konteineris turi visas member funkcijas, non-funkcijas, member tipus.
 
 ---------------
 5 sukurtų funkcijų aprašai
