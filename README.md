@@ -12,7 +12,7 @@ creating vector class c++
           limit = avail;
       }
       
-* insert - įterpia reikšmę į pasirinktą vietą
+* insert - įterpia reikšmę į pasirinktą vietą. Pirma į funkciją įrašoma reikšmė turi būti iteratorius (pvz.: A.begin()+1), antra - reikšmė, kuri bus įterpiama į pasirinktą konteinerio vietą.
 
       //insert()
       template <class T>
@@ -44,7 +44,7 @@ creating vector class c++
 
       }
       
-* resize - pakeičia konteinerio dydį ir į laisvas vietas įrašo reikšmę
+* resize - pakeičia konteinerio dydį ir į laisvas vietas įrašo reikšmę (šiuo atveju 0). Taip pat sukurta kita resize funkcija (void Vec<T>::resize(int it, T value)), kuri priima reikšmę, ji įterpiama į konteinerio laisvas vietas (vietoje 0)
 
       //resize()
       template <class T>
@@ -71,7 +71,7 @@ creating vector class c++
           }
       }
       
-* erase - ištrina elementą pasiriktoje konteinerio vietoje
+* erase - ištrina elementą pasiriktoje konteinerio vietoje. Funkcija neveikia, jeigu pasirinkta konteinerio vieta jame neegzistuoja
 
       //erase()
       template<class T>
@@ -91,7 +91,7 @@ creating vector class c++
           avail--;
       }
       
-* swap - apkeičia dviejų konteinerių duomenis tarpusavy
+* swap - apkeičia dviejų konteinerių duomenis tarpusavy. Funkcija veikia tik tada, kai abiejų konteinerių dydžiai yra vienodi.
 
       //swap()
       template <class T>
