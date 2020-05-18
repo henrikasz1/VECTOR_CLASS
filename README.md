@@ -116,12 +116,18 @@ Sukurti vector konteinerį, kuris funckionalumo prasme veiktų taip pačiai kaip
 ---------------
 Spartos analizė
 ---------------
-std::vector VS vector class (using push_back() to insert a certain amount of values to vector)
+*std::vector VS vector class (using push_back() to insert a certain amount of values to vector)
 
 |   Container   |  10K |  100K  |  1MLN   |  10MLN   |  100MLN  |
 |---------------|------|--------|---------|----------|----------|
 |  class_vector |  0s  | 0.004s | 0.038s  |  0.338s  |  2.998s  |
 |   std::vector |  0s  | 0.005s | 0.039s  |  0.337s  |  3.013s  |
 
+*Naudojant duomenų failą su 100000 studentų įrašų, palyginu kiek laiko užtrunka programos veikimas naudojant std::vector ir Vector realizacijas
 
-*Išvada: abiejų konteinerių laikai yra labai panašūs
+|   Container   |    100K   |
+|---------------|-----------|
+|  class_vector |  4.22459s |
+|   std::vector |  4.58936s |
+
+*Išvada: abiejų konteinerių laikai yra labai panašūs, sukurtas vector konteineris yra neženkliai greitesnis, tačiau patartina naudotis std::vector konteineriu, nes jis yra užtikrintas ir patikimas
