@@ -11,7 +11,37 @@ creating vector class c++
       {
           limit = avail;
       }
+* insert - įterpia reikšmę į pasirinktą vietą
 
+      //insert()
+      template <class T>
+      void Vec<T>::insert(const_iterator it, const_reference value)
+      {
+          int temp = 0;
+          for (auto i = this->begin(); i != it; i++)
+          {
+              temp++;
+          }
+          //from grow() function
+          size_type new_size = this->size()+1;
+          iterator new_data_ = alloc.allocate(new_size);
+          iterator new_avail = uninitialized_copy(data_, avail+1, new_data_);
+          for (size_t i=0; i<temp; i++)
+          {
+              new_data_[i] = data_[i];
+          }
+          new_data_[temp] = value;
+          for (size_t i=temp+1; i!=new_size; i++)
+          {
+              new_data_[i] = data_[i-1];
+          }
+          uncreate();
+          //from grow() function
+          data_ = new_data_;
+          avail = new_avail;
+          limit = data_ + new_size;
+
+      }
 
 ---------------
 Spartos analizė
