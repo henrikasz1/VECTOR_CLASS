@@ -4,7 +4,7 @@ creating vector class c++
 ---------------
 Spartos analizė
 ---------------
-std::vector VS vector class:
+std::vector VS vector class (using push_back() to insert a certain amount of values to vector)
 
 |   Container   |  10K |  100K  |  1MLN   |  10MLN   |  100MLN  |
 |---------------|------|--------|---------|----------|----------|
