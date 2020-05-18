@@ -4,8 +4,7 @@ creating vector class c++
 ---------------
 Spartos analizė
 ---------------
-
-*std::vector VS vector class:
+std::vector VS vector class:
 
 |   Container   |  10K |  100K  |  1MLN   |  10MLN   |  100MLN  |
 |---------------|------|--------|---------|----------|----------|
