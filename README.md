@@ -130,4 +130,15 @@ Spartos analizė
 |  class_vector |  4.22459s |
 |   std::vector |  4.58936s |
 
+*Perskirstymų skaičius kai size()==capacity()
+
+|   size  |  Alloc_std::vec | Alloc_vector_class |
+|---------|---------------- |--------------------|
+| 1k      |       10        |         10         |
+| 10k     |       14        |         14         |
+| 100k    |       17        |         17         |
+| 1mln    |       20        |         20         |
+| 10mln   |       24        |         24         |
+| 100mln  |       27        |         27         |
+ 
 *Išvada: abiejų konteinerių laikai yra labai panašūs, sukurtas vector konteineris yra neženkliai greitesnis, tačiau patartina naudotis std::vector konteineriu, nes jis yra užtikrintas ir patikimas
